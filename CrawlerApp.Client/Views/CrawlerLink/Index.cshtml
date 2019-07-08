@@ -1,0 +1,29 @@
+﻿@model List<CrawlerApp.Client.Models.CrawlerLink>
+
+@{
+
+}
+@{
+    int counter = 0;
+}
+<h1>List of All Links</h1>
+<p>
+    These are all the links that the crawler has in database,
+    including the Crawled Links and Uncrawled Links
+</p>
+@foreach (var item in Model)
+{
+    counter++;
+}
+<h2>Number of links: @counter </h2>
+
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Link
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,26 @@
+﻿@model List<CrawlerApp.Client.Models.CrawlerLink>
+
+@{
+
+}
+
+@{
+    int counter = 0;
+}
+
+<h1>List of UnCrawled Links</h1>
+@foreach (var item in Model)
+{
+    counter++;
+}
+
+<h2>Number of uncrawled links: @counter </h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Link
+        </li>
+    }
+</ul>
